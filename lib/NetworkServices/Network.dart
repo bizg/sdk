@@ -4,6 +4,7 @@
 */
 import 'dart:convert';
 
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:http/http.dart' as http;
 
 Future<dynamic> postData(String url, String apiBody) async {
@@ -46,7 +47,7 @@ Future<dynamic> outboundAgentMessagePost(
 ) async {
   try {
     final response = await http.post(
-      url,
+      Uri.parse(url),
       body: apiBody,
       headers: {
         "Accept": 'application/json',

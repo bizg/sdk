@@ -5,15 +5,15 @@
 import 'package:AriesFlutterMobileAgent/Utils/DidDoc.dart';
 
 class Connection {
-  String did;
-  DidDoc didDoc;
-  String verkey;
-  String state;
-  String theirLabel;
-  String theirDid;
-  DidDoc theirDidDoc;
-  String createdAt;
-  String updatedAt;
+  String did = '';
+  DidDoc? didDoc;
+  String verkey = '';
+  String state = '';
+  String theirLabel = '';
+  String theirDid = '';
+  DidDoc? theirDidDoc;
+  String createdAt = '';
+  String updatedAt = '';
 
   // ignore: non_constant_identifier_names
   String get connection_state => state;
@@ -24,15 +24,15 @@ class Connection {
   }
 
   Connection({
-    this.did,
+    this.did = '',
     this.didDoc,
-    this.verkey,
-    this.state,
-    this.theirDid,
+    this.verkey = '',
+    this.state = '',
+    this.theirDid = '',
     this.theirDidDoc,
-    this.theirLabel,
-    this.createdAt,
-    this.updatedAt,
+    this.theirLabel = '',
+    this.createdAt = '',
+    this.updatedAt = '',
   });
 
   Connection.fromJson(Map<String, dynamic> json) {
@@ -63,7 +63,7 @@ class Connection {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['did'] = this.did;
     if (this.didDoc != null) {
-      data['didDoc'] = this.didDoc.toJson();
+      data['didDoc'] = this.didDoc?.toJson();
     }
     data['theirDid'] = this.theirDid;
     data['theirDidDoc'] = this.theirDidDoc;

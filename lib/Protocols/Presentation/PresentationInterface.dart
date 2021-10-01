@@ -3,24 +3,24 @@
   SPDX-License-Identifier: Apache-2.0
 */
 class Presentation {
-  String connectionId;
-  String theirLabel;
-  String threadId;
-  String presentationRequest;
-  String presentation;
-  String state;
-  String createdAt;
-  String updatedAt;
+  String connectionId = '';
+  String theirLabel = '';
+  String threadId = '';
+  String presentationRequest = '';
+  String presentation = '';
+  String state = '';
+  String createdAt = '';
+  String updatedAt = '';
 
   Presentation({
-    this.connectionId,
-    this.theirLabel,
-    this.threadId,
-    this.presentationRequest,
-    this.presentation,
-    this.state,
-    this.createdAt,
-    this.updatedAt,
+    this.connectionId = '',
+    this.theirLabel = '',
+    this.threadId = '',
+    this.presentationRequest = '',
+    this.presentation = '',
+    this.state = '',
+    this.createdAt = '',
+    this.updatedAt = '',
   });
 
   Presentation.fromJson(Map<String, dynamic> json) {

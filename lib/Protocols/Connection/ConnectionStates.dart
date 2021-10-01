@@ -24,7 +24,7 @@ extension ConnectionStateExtension on ConnectionStates {
       case ConnectionStates.COMPLETE:
         return "COMPLETE";
       default:
-        return null;
+        return "null";
     }
   }
 }

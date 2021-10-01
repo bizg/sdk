@@ -28,7 +28,7 @@ extension CredentialStateExtension on CredentialState {
         return "STATE_REVOKED";
 
       default:
-        return null;
+        return "null";
     }
   }
 }

@@ -12,7 +12,7 @@ extension TrustPingStateExtension on TrustPingState {
       case TrustPingState.ACTIVE:
         return "ACTIVE";
       default:
-        return null;
+        return "null";
     }
   }
 }

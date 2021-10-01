@@ -76,8 +76,7 @@ class CredentialService {
         return false;
       }
     } catch (exception) {
-      print("exception in sendCredentialProposalsendCredentialProposal" +
-          exception);
+      print("exception in sendCredentialProposalsendCredentialProposal $exception");
       throw exception;
     }
   }

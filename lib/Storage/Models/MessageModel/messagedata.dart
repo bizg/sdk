@@ -27,11 +27,11 @@ class MessageData extends HiveObject {
   final String connectionId;
 
   MessageData({
-    this.messageId,
-    this.messages,
-    this.auto,
+    this.messageId = '',
+    this.messages = '',
+    this.auto = false,
     this.thId = '0',
-    this.isProcessed,
-    this.connectionId,
+    this.isProcessed = false,
+    this.connectionId = '',
   });
 }

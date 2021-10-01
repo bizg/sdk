@@ -2,6 +2,7 @@
   Copyright AyanWorks Technology Solutions Pvt. Ltd. All Rights Reserved.
   SPDX-License-Identifier: Apache-2.0
 */
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:hive/hive.dart';
 
 part 'walletdata.g.dart';
@@ -44,12 +45,14 @@ class WalletData extends HiveObject {
   );
 
   WalletData.next(
-      {this.walletConfig,
-      this.walletCredentials,
-      this.label,
-      this.publicDid,
-      this.verkey,
-      this.masterSecretId,
-      this.serviceEndpoint,
-      this.routingKey});
+      {
+        this.walletConfig = '',
+        this.walletCredentials = '',
+        this.label = '',
+        this.publicDid = '',
+        this.verkey = '',
+        this.masterSecretId = '',
+        this.serviceEndpoint = '',
+        this.routingKey = ''
+      });
 }

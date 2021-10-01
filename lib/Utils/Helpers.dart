@@ -71,17 +71,17 @@ Object createOutboundMessage(
       };
       return jsonEncode(data);
     } else {
-      DidDoc theirDidDoc = connection.theirDidDoc;
+      DidDoc? theirDidDoc = connection.theirDidDoc;
 
       if (theirDidDoc.toString().isEmpty) {
         throw CustomExceptions().didDocEmpty();
       }
       var objValues = {
         'connection': jsonEncode(connection),
-        'endpoint': theirDidDoc.service?[0].serviceEndpoint,
+        'endpoint': theirDidDoc?.service?[0].serviceEndpoint,
         'payload': jsonEncode(payload),
-        'recipientKeys': theirDidDoc.service?[0].recipientKeys,
-        'routingKeys': theirDidDoc.service?[0].routingKeys,
+        'recipientKeys': theirDidDoc?.service?[0].recipientKeys,
+        'routingKeys': theirDidDoc?.service?[0].routingKeys,
         'senderVk': connection.verkey,
       };
       return jsonEncode(objValues);

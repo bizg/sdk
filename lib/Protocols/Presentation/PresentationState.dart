@@ -30,7 +30,7 @@ extension PresentationStateExtension on PresentationState {
       case PresentationState.STATE_PROPOSAL_SENT:
         return "STATE_PROPOSAL_SENT";
       default:
-        return null;
+        return "null";
     }
   }
 }

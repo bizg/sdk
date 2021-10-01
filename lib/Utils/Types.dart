@@ -1,11 +1,11 @@
 import 'package:AriesFlutterMobileAgent/Protocols/Connection/ConnectionInterface.dart';
 
 class InboundMessage {
-  String? senderVerkey;
-  String? recipientVerkey;
+  String senderVerkey = '';
+  String recipientVerkey = '';
   dynamic message;
 
-  InboundMessage({this.senderVerkey, this.recipientVerkey, this.message});
+  InboundMessage({this.senderVerkey = '', this.recipientVerkey = '', this.message});
 
   InboundMessage.fromJson(Map<String, dynamic> json) {
     senderVerkey = json['sender_verkey'];

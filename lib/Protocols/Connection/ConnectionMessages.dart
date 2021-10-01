@@ -5,6 +5,7 @@
 import 'dart:convert';
 
 import 'package:AriesFlutterMobileAgent/Utils/utils.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:uuid/uuid.dart';
 
 import 'ConnectionInterface.dart';
@@ -15,14 +16,14 @@ Object createInvitationMessage(
   Connection connection,
   String label,
 ) {
-  DidDoc didDoc = connection.didDoc;
+  DidDoc? didDoc = connection.didDoc;
   var data = {
     '@type': MessageType.ConnectionInvitation,
     '@id': uuid.v4(),
     'label': label,
-    'recipientKeys': didDoc.service[0].recipientKeys,
-    'serviceEndpoint': didDoc.service[0].serviceEndpoint,
-    'routingKeys': didDoc.service[0].routingKeys,
+    'recipientKeys': didDoc?.service?[0].recipientKeys,
+    'serviceEndpoint': didDoc?.service?[0].serviceEndpoint,
+    'routingKeys': didDoc?.service?[0].routingKeys,
   };
   return data;
 }

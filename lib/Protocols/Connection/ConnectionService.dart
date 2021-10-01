@@ -235,8 +235,7 @@ class ConnectionService {
         connectionResponse,
         'connection',
       );
-      Map<String, dynamic> outboundMessage =
-          createOutboundMessage(connection, signedConnectionResponse);
+      Object outboundMessage = createOutboundMessage(connection, signedConnectionResponse);
       var outboundPackMessage =
           await packMessage(configJson, credentialsJson, outboundMessage);
       await outboundAgentMessagePost(

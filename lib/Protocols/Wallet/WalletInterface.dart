@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 
 class WalletConfig {
   final String id;
-  final List<String> storageType;
-  final StorageConfig storageConfig;
+  final List<String>? storageType;
+  final StorageConfig? storageConfig;
 
   WalletConfig({
-    @required this.id,
+    required this.id,
     this.storageType,
     this.storageConfig,
   });
@@ -18,7 +18,7 @@ class WalletConfig {
 
 class WalletCredentials {
   String key;
-  WalletCredentials({@required this.key});
+  WalletCredentials({required this.key});
 }
 
 class DidJson {
@@ -27,13 +27,13 @@ class DidJson {
   final String methodName;
 
   DidJson({
-    this.did,
-    this.seed,
-    this.methodName,
+    this.did = '',
+    this.seed = '',
+    this.methodName = '',
   });
 }
 
 class StorageConfig {
-  String path;
+  String? path;
   StorageConfig({this.path});
 }

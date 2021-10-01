@@ -4,14 +4,14 @@
 */
 class InvitationDetails {
   String label;
-  List<String> recipientKeys;
+  List<String>? recipientKeys;
   String serviceEndpoint;
-  List<String> routingKeys;
+  List<String>? routingKeys;
 
   InvitationDetails({
-    this.label,
+    this.label = '',
     this.recipientKeys,
-    this.serviceEndpoint,
+    this.serviceEndpoint = '',
     this.routingKeys,
   });
 }

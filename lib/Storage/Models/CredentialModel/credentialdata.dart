@@ -2,6 +2,7 @@
   Copyright AyanWorks Technology Solutions Pvt. Ltd. All Rights Reserved.
   SPDX-License-Identifier: Apache-2.0
 */
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:hive/hive.dart';
 
 part 'credentialdata.g.dart';
@@ -21,9 +22,9 @@ class CredentialData extends HiveObject {
   final String issuecredential;
 
   CredentialData({
-    this.issuecredentialId,
-    this.credentialId,
-    this.connectionId,
-    this.issuecredential,
+    this.issuecredentialId = '',
+    this.credentialId = '',
+    this.connectionId = '',
+    this.issuecredential = '',
   });
 }

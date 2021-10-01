@@ -179,7 +179,7 @@ class AriesFlutterMobileAgent {
       );
       return sendCredentialProposal;
     } catch (exception) {
-      print('Exception in send credential praposal = ' + exception);
+      print('Exception in send credential praposal = $exception');
       throw exception;
     }
   }
@@ -211,7 +211,7 @@ class AriesFlutterMobileAgent {
     }
   }
 
-  static Future listAllCredentials({Object filter}) async {
+  static Future listAllCredentials({Object? filter}) async {
     try {
       MethodChannel channel = const MethodChannel('AriesFlutterMobileAgent');
       WalletData sdkDB = await DBServices.getUserData();
