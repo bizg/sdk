@@ -28,7 +28,7 @@ class TrustPingService {
         TrustPingState.SENT.state,
       );
       WalletData sdkDB = await DBServices.getWalletData();
-      Object outboundMessage = createOutboundMessage(connection, trustPingMessage);
+      Map<String, dynamic> outboundMessage = createOutboundMessage(connection, trustPingMessage);
       var outboundPackMessage = await packMessage(
           sdkDB.walletConfig, sdkDB.walletCredentials, outboundMessage);
 
@@ -46,7 +46,8 @@ class TrustPingService {
 
   static saveTrustPingResponse(InboundMessage inboundMessage) async {
     try {
-      ConnectionData connectionDB = await DBServices.getConnection(inboundMessage.recipientVerkey);
+      ConnectionData connectionDB =
+          await DBServices.getConnection(inboundMessage.recipientVerkey);
       Connection connection =
           Connection.fromJson(jsonDecode(connectionDB.connection));
       var message = jsonDecode(inboundMessage.message);
@@ -84,7 +85,7 @@ class TrustPingService {
 
       if (parsedMessage['response_requested']) {
         var reply = createTrustPingResponseMessage(parsedMessage['@id']);
-        Object outboundMessage = createOutboundMessage(connection, reply);
+        Map<String, dynamic> outboundMessage = createOutboundMessage(connection, reply);
         var outboundPackMessage = await packMessage(
           configJson,
           credentialsJson,

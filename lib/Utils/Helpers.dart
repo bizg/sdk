@@ -52,7 +52,7 @@ Object decodeInvitationFromUrl(String invitationUrl) {
   return invitation;
 }
 
-Object createOutboundMessage(
+createOutboundMessage(
   Connection connection,
   Object payload, [
   invitation,

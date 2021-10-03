@@ -143,7 +143,7 @@ class ConnectionService {
       connection.state = ConnectionStates.COMPLETE.state;
       connection.updatedAt = now;
 
-      if (connection.theirDidDoc.service[0].recipientKeys[0].isEmpty) {
+      if (connection.theirDidDoc!.service![0].recipientKeys![0].isEmpty) {
         throw ErrorDescription(
             'Connection Data with verKey ${connection.verkey} has no recipient keys.');
       }
@@ -235,7 +235,7 @@ class ConnectionService {
         connectionResponse,
         'connection',
       );
-      Object outboundMessage = createOutboundMessage(connection, signedConnectionResponse);
+      Map<String, dynamic> outboundMessage = createOutboundMessage(connection, signedConnectionResponse);
       var outboundPackMessage =
           await packMessage(configJson, credentialsJson, outboundMessage);
       await outboundAgentMessagePost(
