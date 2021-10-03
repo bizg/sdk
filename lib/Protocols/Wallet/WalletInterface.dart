@@ -2,7 +2,6 @@
   Copyright AyanWorks Technology Solutions Pvt. Ltd. All Rights Reserved.
   SPDX-License-Identifier: Apache-2.0
 */
-import 'package:flutter/material.dart';
 
 class WalletConfig {
   final String id;

@@ -5,6 +5,7 @@
 import 'dart:convert';
 
 import 'package:AriesFlutterMobileAgent/Utils/MessageType.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:uuid/uuid.dart';
 
 String createTrustPingMessage({

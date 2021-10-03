@@ -4,6 +4,7 @@
 */
 import 'package:AriesFlutterMobileAgent/Utils/Helpers.dart';
 import 'package:AriesFlutterMobileAgent/Utils/MessageType.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:uuid/uuid.dart';
 
 credentialPreviewMessage(attributes) {

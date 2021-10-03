@@ -56,7 +56,7 @@ class DBServices {
   static Future<String> getServiceEndpoint() async {
     try {
       var walletData = await getWalletData();
-      String serviceEndpoint = walletData.serviceEndpoint!.replaceFirst('/endpoint', '');
+      String serviceEndpoint = walletData.serviceEndpoint.replaceFirst('/endpoint', '');
       return serviceEndpoint;
     } catch (exception) {
       throw exception;
